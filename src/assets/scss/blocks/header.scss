@@ -7,7 +7,46 @@
   left: 0;
   z-index: 20;
 
-  @include breakpoint($xl-bp) {
+  background-color: var(--black);
+  padding-top: 2.6rem;
+  padding-bottom: 2.6rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  color: var(--white);
+
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
+
+.header-cork {
+  height: 9.4rem;
+  width: 100%;
+  background-color: var(--black);
+}
+
+.header__contacts {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.telegram-contact {
+  width: 2.4rem;
+  height: 2.4rem;
+  display: block;
+  svg {
+    width: 100%;
+    height: 100%;
+    fill: var(--white);
+    transition: background-color .3s;
+  }
+
+  &:hover {
+    svg {
+      fill: var(--yellow);
+    }
   }
 }
 

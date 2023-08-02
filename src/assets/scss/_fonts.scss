@@ -1,13 +1,36 @@
+
 @font-face {
-  font-family: "Inter";
-  src: url("../fonts/Inter-Black.woff2") format("woff2"),
-    url("../fonts/Inter-Black.woff") format("woff");
+  font-family: "Garamond";
+  src: url("../fonts/Garamond.woff2") format("woff2"),
+    url("../fonts/Garamond.woff") format("woff");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
 }
 
 @font-face {
-  font-family: "InterReg";
-  src: url("../fonts/Inter-Regular.woff2") format("woff2"),
-    url("../fonts/Inter-Regular.woff") format("woff");
+  font-family: "Open Sans";
+  src: url("../fonts/OpenSans-Bold.woff2") format("woff2"),
+    url("../fonts/OpenSans-Bold.woff") format("woff");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/OpenSans-SemiBold.woff2") format("woff2"),
+    url("../fonts/OpenSans-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/OpenSans-Regular.woff2") format("woff2"),
+    url("../fonts/OpenSans-Regular.woff") format("woff");
   font-weight: 400;
+  font-display: swap;
   font-style: normal;
 }

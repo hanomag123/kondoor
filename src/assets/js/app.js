@@ -183,6 +183,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
     return wrapper;
   }
+
+  const worksWrappers = document.querySelectorAll('.works-swiper-wrapper');
+
+  if (worksWrappers.length) {
+    worksWrappers.forEach(el => {
+      const swiper = el.querySelector('.works-swiper');
+      const next = el.querySelector('.next');
+      const prev = el.querySelector('.prev');
+      if (swiper) {
+        new Swiper(swiper, {
+          loop: true,
+          slidesPerView: 'auto',
+          speed: 400,
+          navigation: {
+            nextEl: next,
+            prevEl: prev,
+          },
+        })
+      }
+
+    })
+  }
+
+
 });
 
 

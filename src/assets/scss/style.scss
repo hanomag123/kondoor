@@ -10,10 +10,7 @@
 
 html {
   box-sizing: border-box;
-  font-size: calc(100vw / 1920 * 10);
-  @include breakpoint($cos-bp) {
-    font-size: calc(100vw / 1440 * 10);
-  }
+  font-size: calc(100vw / 1440 * 10);
 
   @include breakpoint($xl-bp) {
     font-size: calc(100vw / 768 * 10);
@@ -33,7 +30,10 @@ html {
 }
 
 body {
-
+  font-family: 'Open Sans';
+  font-size: 2rem;
+  line-height: 2.72rem;
+  font-weight: 400;
 }
 
 img {
@@ -45,13 +45,10 @@ svg {
   transition: all 0.1s linear;
 }
 
-/* Vendors */
-@import "./importsVendors.scss";
-
 
 /* Blocks */
 
-@import "./importsBlocks.scss";
+@import "importsBlocks.scss";
 
 
 
@@ -65,12 +62,8 @@ svg {
 }
 
 .container {
-  padding-right: 4rem;
-  padding-left: 4rem;
-  @include breakpoint($cos-bp) {
-    padding-right: 5rem;
-    padding-left: 5rem;
-  }
+  padding-right: 13rem;
+  padding-left: 13rem;
   @include breakpoint($xl-bp) {
     padding-right: 2rem;
     padding-left: 2rem;
