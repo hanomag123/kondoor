@@ -1,6 +1,6 @@
 <header class="header container">
 
-  <button class="menu-button myclass">
+  <button class="menu-button">
     <span class="burger-button-close">
       <span id="first-line-burger"></span>
       <span id="second-line-burger"></span>
@@ -9,7 +9,7 @@
   </button>
 
   <a href="#" class="header__logo">
-    <img src="./assets/images/logo/logo.png" alt="logo">
+    <img src="./assets/images/logo/logo.svg" alt="logo">
   </a>
 
   {{> menu}}
@@ -19,7 +19,10 @@
       <svg><use href='#telegramIcon'></use></svg>
     </a>
 
-    <a href="tel:+79255179971">+7 (925) 517-99-71</a>
+    <a class="header__tel" href="tel:+79255179971">
+      <span>+7 (925) 517-99-71</span>
+      <svg><use href='#telIcon'></use></svg>
+    </a>
   </div>
 
 </header>

@@ -6,6 +6,17 @@
 </head>
 
 <body>
+    <!-- Preloader -->
+    <div id="loader-wrapper">
+      <div id="loader"></div>
+      <div class="loader-section section-left">
+        <p>KON</p>
+      </div>
+      <div class="loader-section section-right">
+        <p>DOOR</p>
+      </div>
+    </div>
+
     {{> sprite }}
 
     <div class="page">
@@ -29,6 +40,11 @@
     <!-- JS -->
     <script src="assets/js/vendor.js"></script>
     <script src="assets/js/app.js"></script>
+    <script>
+      window.onload = function () {
+        document.documentElement.classList.add('loaded');
+      }
+    </script>
 </body>
 
 </html>

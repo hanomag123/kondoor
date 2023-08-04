@@ -1,0 +1,340 @@
+.about-text {
+  text-align: center;
+  max-width: 92.2rem;
+  margin-top: 2.5rem;
+
+  font-size: 2.4rem;
+  line-height: 5rem;
+  @include breakpoint($xl-bp) {
+    font-size: 1.4rem;
+    line-height: 1.9rem;
+  }
+  @include breakpoint($sm-bp) {
+    margin-top: 1rem;
+  }
+}
+
+.aboutValues-list {
+  margin-top: 8rem;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 4rem;
+  @include breakpoint($xl-bp) {
+    margin-top: 2rem;
+    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include breakpoint($sm-bp) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include breakpoint($sm-bp) {
+      flex-direction: row;
+    }
+    img {
+      width: 5rem;
+      height: 5rem;
+      @include breakpoint($sm-bp) {
+        width: 3rem;
+        height: 3rem;
+      }
+    }
+  }
+}
+
+.aboutValues-desc {
+  text-align: center;
+  margin-top: 1rem;
+  @include breakpoint($sm-bp) {
+    margin-top: 0;
+    margin-left: 2rem;
+    text-align: start;
+  }
+}
+
+.py-80 {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  @include breakpoint($xl-bp) {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+
+.tree {
+  display: flex;
+  flex-direction: column;
+  gap: 3.6rem;
+  @include breakpoint($sm-bp) {
+    gap: 1.1rem;
+  }
+}
+
+.tree-top,
+.tree-bottom {
+  display: flex;
+  gap: 8.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  @include breakpoint($sm-bp) {
+    gap: 0.8rem;
+  }
+}
+
+.tree-bottom {
+  .tree-title {
+    text-align: end;
+    padding-left: 6rem;
+    @include breakpoint($xl-bp) {
+      padding-left: 0;
+      margin-left: auto;
+      margin-right: 0;
+    }
+  }
+}
+
+.tree-title {
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  max-width: 35.1rem;
+  @include breakpoint($xl-bp) {
+    margin-right: auto;
+  }
+  @include breakpoint($sm-bp) {
+    font-size: 1.1rem;
+    line-height: 1.4rem;
+    max-width: 13.2rem;
+  }
+  strong {
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: 0.1rem;
+  }
+}
+
+.tree-ball {
+  width: 17rem;
+  height: 17rem;
+  border-radius: 100%;
+  background-color: var(--brown);
+  display: flex!important;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1.2rem;
+  @include breakpoint($sm-bp) {
+    width: 7.7rem;
+    height: 7.7rem;
+    padding: 0;
+  }
+  & > * {
+    position: relative;
+    z-index: 1;
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    @include breakpoint($sm-bp) {
+      font-size: 0.8rem;
+      line-height: 1.4rem;
+      max-width: 7.7rem;
+    }
+  }
+  & > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
+}
+
+.variants-swiper-wrapper {
+  margin-top: 4rem;
+
+  .swiper-slide {
+    width: 28.5rem;
+    overflow: hidden;
+    position: relative;
+    margin-right: 2.5rem;
+    @include breakpoint($xl-bp) {
+      margin-right: 1.5rem;
+    }
+    @include breakpoint($sm-bp) {
+      width: 15rem;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .arrow-button {
+    position: absolute;
+    top: 50%;
+    transform: translate3d(0, -50%, 0);
+    z-index: 5;
+  }
+
+  .next {
+    right: 32.9rem;
+    @include breakpoint($cos-bp) {
+      right: 8.9rem;
+    }
+    @include breakpoint($xl-bp) {
+      right: 1.1rem;
+    }
+    &:hover {
+      transform: translate3d(0.5rem, -50%, 0);
+    }
+  }
+
+  .prev {
+    left: 32.9rem;
+    @include breakpoint($cos-bp) {
+      left: 8.9rem;
+    }
+    @include breakpoint($xl-bp) {
+      left: 1.1rem;
+    }
+    &:hover {
+      transform: translate3d(-0.5rem, -50%, 0);
+    }
+  }
+
+}
+
+.variants-title {
+  background-color: var(--brown);
+  min-height: 7.4rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  font-size: 2rem;
+  line-height: 2.7rem;
+  color: var(--white);
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  @include breakpoint($sm-bp) {
+    font-size: 1.05rem;
+    line-height: 1.4rem;
+    padding: 0.5rem 1rem;
+    min-height: 3.9rem;
+  }
+}
+
+.furniture-subtitle {
+  font-family: 'Open Sans';
+  margin-top: 4rem;
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+  font-weight: 400;
+  @include breakpoint($xl-bp) {
+    margin-top: 2rem;
+    font-size: 1.4rem;
+  }
+
+}
+
+.furniture-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3.33rem;
+  margin-top: 4rem;
+  @include breakpoint($xl-bp) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+
+  li {
+    &:nth-child(3),
+    &:nth-child(4) {
+      .furniture-text {
+        @include breakpoint($sm-bp) {
+          min-height: 9.6rem;
+        }
+      }
+    }
+    .img-cover {
+      height: 27rem;
+      @include breakpoint($sm-bp) {
+        height: 15.6rem;
+      }
+    }
+  }
+}
+
+.furniture-text {
+  padding: 1rem 2rem;
+  background-color: var(--white);
+  color: var(--black);
+  font-size: 2rem;
+  line-height: 2.7rem;
+  min-height: 15.5rem;
+  display: flex;
+  align-items: center;
+  @include breakpoint($xl-bp) {
+    font-size: 1.4rem;
+    line-height: 1.9rem;
+  }
+  @include breakpoint($sm-bp) {
+    padding: 1rem;
+  }
+}
+
+.factory-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  margin-top: 4rem;
+  @include breakpoint($xl-bp) {
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  li {
+    display: flex;
+    background-color: var(--white);
+    color: var(--black);
+    &.reverse {
+      flex-direction: row-reverse;
+      @include breakpoint($xl-bp) {
+        flex-direction: column;
+      }
+    }
+    @include breakpoint($xl-bp) {
+      flex-direction: column;
+    }
+    .img-cover {
+      flex: 0 0 auto;
+      width: 51.3rem;
+      min-height: 37.6rem;
+      @include breakpoint($xl-bp) {
+        width: 100%;
+        height: 18rem;
+        min-height: auto;
+      }
+    }
+  }
+}
+
+.factory-text {
+  padding: 3.5rem;
+  display: flex;
+  align-items: center;
+  @include breakpoint($sm-bp) {
+    padding: 1.5rem 2rem;
+    text-align: justify;
+  }
+}

@@ -19,28 +19,99 @@
 
   font-size: 1.6rem;
   line-height: 2.4rem;
+  @include breakpoint($xl-bp) {
+    padding-bottom: 1.2rem;
+    padding-top: 3.6rem;
+    align-items: center;
+    transition: unset;
+    will-change: unset;
+    &::before {
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: var(--black);
+    }
+  }
+}
+
+.header__logo {
+  width: 14.2rem;
+  height: 4.2rem;
+  position: relative;
+  top: 0.2rem;
+  @include breakpoint($xl-bp) {
+    z-index: 5;
+  }
+  @include breakpoint($sm-bp) {
+    width: 8.2rem;
+    height: 2.4rem;
+    margin-left: 3rem;
+    top: 0;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
 }
 
 .header-cork {
   height: 9.4rem;
   width: 100%;
   background-color: var(--black);
+  @include breakpoint($sm-bp) {
+    height: 7.2rem;
+  }
 }
 
 .header__contacts {
   display: flex;
   gap: 1.5rem;
+  @include breakpoint($xl-bp) {
+    z-index: 5;
+  }
+  @include breakpoint($sm-bp) {
+    gap: 1rem;
+  }
+}
+
+.header__tel {
+  svg {
+    display: none;
+    @include breakpoint($xl-bp) {
+      display: block;
+      width: 2.1rem;
+      height: 2.1rem;
+      fill: var(--white);
+
+      &:hover {
+        fill: var(--yellow);
+      }
+    }
+  }
+  span {
+    @include breakpoint($xl-bp) {
+      display: none;
+    }
+  }
 }
 
 .telegram-contact {
   width: 2.4rem;
   height: 2.4rem;
   display: block;
+  @include breakpoint($xl-bp) {
+    width: 2.1rem;
+    height: 2.1rem;
+  }
   svg {
     width: 100%;
     height: 100%;
     fill: var(--white);
-    transition: background-color .3s;
+    transition: fill .3s;
   }
 
   &:hover {
@@ -52,4 +123,7 @@
 
 .out {
   transform: translate3d(0, calc(-100% - 1rem), 0);
+  @include breakpoint($xl-bp) {
+    transform: unset;
+  }
 }
