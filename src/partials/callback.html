@@ -4,36 +4,63 @@
   </div>
 
   <div class="callback-form container">
-    <h2 class="h2" data-aos="fade-up" id="mainForm">Оставить заявку</h2>
-    <form class="form" action="#" enctype="multipart/form-data">
-      <div class="input-wrapper">
-        <div>Имя*</div>
-        <input type="text" name="name" placeholder="Как Вас зовут?" required>
-      </div>
-      <div class="input-wrapper">
-        <div>Номер телефона*</div>
-        <input type="tel" name="name" placeholder="Введите Ваш номер телефона" required>
-      </div>
-      <div class="input-file-container">
-        <p>Загрузите изображение изделия, ваши наработки или дизайн-проект</p>
-        <label tabindex="0" class="input-file-trigger">
-          Прикрепите файлы
-          <input class="input-file" type="file" multiple="multiple" name="file">
+    <div class="form-wrapper">
+      <h2 class="h2" data-aos="fade-up" id="mainForm">Оставить заявку</h2>
+      <form class="form" action="#" enctype="multipart/form-data">
+        <div class="input-wrapper">
+          <div>Имя*</div>
+          <input type="text" name="name" placeholder="Как Вас зовут?" required>
+        </div>
+        <div class="input-wrapper">
+          <div>Номер телефона*</div>
+          <input type="tel" name="name" placeholder="Введите Ваш номер телефона" required>
+        </div>
+        <div class="input-file-container">
+          <p>Загрузите изображение изделия, ваши наработки или дизайн-проект</p>
+          <label tabindex="0" class="input-file-trigger">
+            Прикрепите файлы
+            <input class="input-file" type="file" multiple="multiple" name="file">
+          </label>
+          <span class="file-return"></span>
+        </div>
+        <div class="input-wrapper">
+          <div>Оставьте комментарий</div>
+          <textarea name="comment" placeholder="Введите Ваш комментарий"></textarea>
+        </div>
+
+        <label class="checkbox-container">
+          <input type="checkbox" required>
+          <span class="checkbox"></span>
+          Согласен на обработку персональных данных
         </label>
-        <span class="file-return"></span>
-      </div>
-      <div class="input-wrapper">
-        <div>Оставьте комментарий</div>
-        <textarea name="comment" placeholder="Введите Ваш комментарий"></textarea>
-      </div>
 
-      <label class="checkbox-container">
-        <input type="checkbox" required>
-        <span class="checkbox"></span>
-        Согласен на обработку персональных данных
-      </label>
+        <button type="submit" class="submit-button" data-aos="fade-left">Отправить</button>
+      </form>
+    </div>
 
-      <button type="submit" class="submit-button" data-aos="fade-left">Отправить</button>
-    </form>
+    <div class="feedback" hidden>
+      <h2 class="h2">Спасибо за заявку!</h2>
+
+      <p class="feedback-text">Мы приняли Вашу заявку и скоро наш менеджер свяжется с Вами для уточнения деталей.</p>
+
+      <div>
+        <p class="feedback-update">Следите за обновлениями <br class="sm-block">в наших соцсетях</p>
+        <ul class="feedback-socials">
+
+          <li>
+            <a href="#"><svg>
+                <use href='#telegramIcon'></use>
+              </svg></a>
+          </li>
+
+          <li>
+            <a href="#"><svg>
+                <use href='#vkIcon'></use>
+              </svg></a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
   </div>
 </section>

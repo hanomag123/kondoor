@@ -59,6 +59,9 @@ html {
       right: 3rem;
     }
     @include breakpoint($xl-bp) {
+      right: 1.8rem;
+    }
+    @include breakpoint($sm-bp) {
       right: 1rem;
     }
   }
@@ -197,6 +200,7 @@ html {
 
 .loaded {
   .onloadtext,
+  .onloadarrow,
   .h1 {
     opacity: 1;
     transform: translate3d(0, 0, 0);
@@ -331,6 +335,13 @@ h1,
   opacity: 0;
   transform: translate3d(0, 5rem, 0);
   transition: 1.6s transform .3s, 1.6s opacity .3s;
+}
+
+.onloadarrow {
+  will-change: opacity, transform;
+  opacity: 0;
+  transform: translate3d(0, -5rem, 0);
+  transition: transform .7s 1s, opacity .7s 1s;
 }
 
 h2,

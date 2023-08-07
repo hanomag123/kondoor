@@ -239,6 +239,26 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   }
 
+  const ourWorksSwipers = document.querySelectorAll('.ourWork-swiper-wrapper');
+
+  if (ourWorksSwipers.length) {
+    ourWorksSwipers.forEach(el => {
+      const swiper = el.querySelector('.ourWork-swiper');
+      const next = el.querySelector('.next');
+      const prev = el.querySelector('.prev');
+      new Swiper(swiper, {
+        loop: true,
+        slidesPerView: 'auto',
+        speed: 400,
+        grabCursor: true,
+        navigation: {
+          nextEl: next,
+          prevEl: prev,
+        },
+      })
+    })
+  }
+
   function addMask() {
     [].forEach.call(document.querySelectorAll('input[type="tel"]'), function (input) {
       let keyCode;
@@ -292,22 +312,24 @@ document.addEventListener("DOMContentLoaded", () => {
     button = document.querySelector(".input-file-trigger"),
     the_return = document.querySelector(".file-return");
 
-  button.addEventListener("keydown", function (event) {
-    if (event.keyCode == 13 || event.keyCode == 32) {
+  if (fileInput && button && the_return) {
+    button.addEventListener("keydown", function (event) {
+      if (event.keyCode == 13 || event.keyCode == 32) {
+        fileInput.focus();
+      }
+    });
+    button.addEventListener("click", function () {
       fileInput.focus();
-    }
-  });
-  button.addEventListener("click", function () {
-    fileInput.focus();
-    return false;
-  });
-  fileInput.addEventListener("change", function () {
-    const files = [];
-    for (let file of this.files) {
-      files.push(`<span class="filename">${file.name} </span>`);
-    }
-    the_return.innerHTML = files.join('');
-  });
+      return false;
+    });
+    fileInput.addEventListener("change", function () {
+      const files = [];
+      for (let file of this.files) {
+        files.push(`<span class="filename">${file.name} </span>`);
+      }
+      the_return.innerHTML = files.join('');
+    });
+  }
 
   AOS.init({
     disable: function disable() {
@@ -336,13 +358,175 @@ document.addEventListener("DOMContentLoaded", () => {
             headerH = header.getBoundingClientRect().height;
           }
           const yOffset = headerH ? -headerH : -200;
-          const y = sc.getBoundingClientRect().top + window.pageYOffset + yOffset;
+          const onMedia = xl.matches ? 0 : 50;
+          const y = sc.getBoundingClientRect().top + window.pageYOffset + yOffset - onMedia;
 
           window.scrollTo({ top: y, behavior: 'smooth' });
         }
       })
     })
   }
+
+  const btn = document.querySelector('.backToTop');
+
+  if (btn) {
+    document.addEventListener('scroll', btnHandler);
+
+    btn.addEventListener('click', function () {
+      event.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    })
+
+  }
+
+  function btnHandler() {
+    var currentScrollPos = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+    if (currentScrollPos < 0) {
+      currentScrollPos = 0;
+      prevScrollpos = 0;
+    };
+    if (prevScrollpos < 0) {
+      prevScrollpos = 0;
+      currentScrollPos = 0;
+    };
+
+
+
+    if (currentScrollPos >= 300) {
+      btn.classList.add('active');
+    } else {
+      btn.classList.remove('active');
+    };
+    prevScrollpos = currentScrollPos;
+  }
+
+  const ourWorkButtons = document.querySelectorAll('.ourWork-button');
+
+  if (ourWorkButtons.length) {
+    ourWorkButtons.forEach(el => {
+      el.addEventListener('click', function () {
+        this.classList.toggle('active');
+        if (this.classList.contains('active')) {
+          disableScroll();
+        } 
+      })
+    })
+  }
+
+  const ourWorksClose = document.querySelectorAll('.ourWork-close');
+
+  if (ourWorksClose.length) {
+    ourWorksClose.forEach(el => {
+      el.addEventListener('click', function () {
+        const parent = this.closest('.ourWork-overlay');
+
+        if (parent) {
+          parent.style.opacity = 0;
+          setTimeout(() => {
+            parent.style.opacity = null;
+            parent.previousElementSibling.classList.remove('active');
+            enableScroll();
+          }, 300)
+
+        }
+      })
+    })
+  }
+
+  const ourWorksOverlays = document.querySelectorAll('.ourWork-overlay');
+
+  if (ourWorksOverlays.length) {
+    ourWorksOverlays.forEach(el => {
+      el.addEventListener('click', function () {
+        if (event.target.classList.contains('ourWork-overlay')) {
+          this.style.opacity = 0;
+          setTimeout(() => {
+          this.style.opacity = null;
+          this.previousElementSibling.classList.remove('active');
+          enableScroll();
+          }, 300)
+
+        }
+      })
+    })
+  }
+
+  const reviewsTwoColumn = document.querySelector('.reviews-list-two-column');
+
+  if (reviewsTwoColumn) {
+    const oneColumn = document.createElement('ul');
+    oneColumn.classList.add('reviews-list-one-column');
+    reviewsTwoColumn.parentElement.appendChild(oneColumn);
+
+    const lists = reviewsTwoColumn.querySelectorAll('ul');
+    const items = reviewsTwoColumn.querySelectorAll('li');
+    const newArr = [];
+
+    items.forEach((el, i) => {
+      lists.forEach(el=> {
+        if (el.children[i]) {
+          newArr.push(el.children[i])
+        }
+      })
+    })
+
+    newArr.forEach(el => {
+      oneColumn.appendChild(el.cloneNode(true))
+    })
+  }
+
+  const articlesButtons = document.querySelectorAll('.articles-button');
+
+  if (articlesButtons.length) {
+    articlesButtons.forEach(el => {
+      el.addEventListener('click', function () {
+        this.classList.toggle('active');
+        if (this.classList.contains('active')) {
+          this.nextElementSibling.style.maxHeight = this.nextElementSibling.scrollHeight + 'px';
+        } else {
+          this.nextElementSibling.style.maxHeight = null;
+        }
+      })
+    })
+  }
+
+  const articlesWrapper = document.querySelectorAll('.articles-wrapper');
+
+  if (articlesWrapper.length) {
+    articlesWrapper.forEach(el => {
+
+      if (el.scrollHeight <= el.offsetHeight) {
+        const btn = el.previousElementSibling;
+        if (btn.classList.contains('articles-button')) {
+          btn.hidden = true;
+        }
+      }
+    })
+  }
+
+  window.addEventListener('resize', () => {
+    const maxHeight = document.querySelectorAll("[style*='max-height']");
+
+    if (maxHeight.length) {
+      maxHeight.forEach(el => {
+        if (el.classList.contains('articles-wrapper')) {
+          el.style.maxHeight = el.scrollHeight + 'px';
+        }
+      })
+    }
+
+    if (articlesWrapper.length) {
+      articlesWrapper.forEach(el => {
+  
+        if (el.scrollHeight <= el.offsetHeight) {
+          const btn = el.previousElementSibling;
+          if (btn.classList.contains('articles-button')) {
+            btn.hidden = true;
+          }
+        }
+      })
+    }
+  })
 
 });
 

@@ -1,0 +1,53 @@
+// .reviews-list {
+//   ul {
+//     columns: 2;
+//     column-gap: 3.6rem;
+//     @include breakpoint($xl-bp) {
+//       columns: 1;
+//     }
+//     li {
+//       margin-top: 1.956rem;
+//       img {
+//         @include breakpoint($sm-bp) {
+//           width: 100%;
+//         }
+//       }
+//       @include breakpoint($xl-bp) {
+//         margin-top: 2rem;
+//       }
+//       &:first-child {
+//         margin-top: 0;
+//       }
+//     }
+//   }
+// }
+
+.reviews-list-two-column {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3.6rem;
+  @include breakpoint($xl-bp) {
+    display: none;
+  }
+  img {
+    width: 100%;
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.956rem;
+  }
+}
+
+.reviews-list-one-column {
+  display: none;
+  img {
+    width: 100%;
+  }
+  @include breakpoint($xl-bp) {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
