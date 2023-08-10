@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="">
+    <title></title>
+    
+    <link rel="stylesheet" href="assets/css/style.css?5">
+    <!-- CSS only -->
+    
+    
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="loader-wrapper">
+      <div id="loader"></div>
+      <!-- <svg><use href='#logoPreload'></use></svg> -->
+      <div class="loader-section section-left">
+        <p>KON</p>
+      </div>
+      <div class="loader-section section-right">
+        <p>DOOR</p>
+      </div>
+    </div>
+
+    <svg style="display: none;">
+    
+      <symbol id="telegramIcon" viewBox="0 0 24 24">
+        <g>
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M19.7769 4.42997C20.024 4.32596 20.2945 4.29008 20.5602 4.32608C20.8259 4.36208 21.0771 4.46863 21.2876 4.63465C21.4981 4.80067 21.6603 5.02008 21.7573 5.27005C21.8542 5.52002 21.8824 5.79141 21.8389 6.05597L19.5709 19.813C19.3509 21.14 17.8949 21.901 16.6779 21.24C15.6599 20.687 14.1479 19.835 12.7879 18.946C12.1079 18.501 10.0249 17.076 10.2809 16.062C10.5009 15.195 14.0009 11.937 16.0009 9.99997C16.7859 9.23897 16.4279 8.79997 15.5009 9.49997C13.1979 11.238 9.5029 13.881 8.2809 14.625C7.2029 15.281 6.6409 15.393 5.9689 15.281C4.7429 15.077 3.6059 14.761 2.6779 14.376C1.4239 13.856 1.4849 12.132 2.6769 11.63L19.7769 4.42997Z" />
+        </g>
+      </symbol>
+    
+      <symbol id="vkIcon" viewBox="0 0 25 25">
+        <g>
+          <path
+            d="M15.7011 2.08325H9.30942C3.47192 2.08325 2.08337 3.47179 2.08337 9.29888V15.6905C2.08337 21.527 3.4615 22.9166 9.299 22.9166H15.6907C21.5271 22.9166 22.9167 21.5385 22.9167 15.701V9.30929C22.9167 3.47179 21.5386 2.08325 15.7011 2.08325ZM18.9021 16.9478H17.3823C16.8073 16.9478 16.6344 16.4822 15.6032 15.451C14.7032 14.5833 14.323 14.4749 14.0948 14.4749C13.7802 14.4749 13.6938 14.5614 13.6938 14.9958V16.3624C13.6938 16.7322 13.574 16.9489 12.6084 16.9489C11.6712 16.8859 10.7625 16.6012 9.95691 16.1182C9.15137 15.6352 8.47209 14.9677 7.97504 14.1708C6.79501 12.702 5.97394 10.9782 5.57712 9.13638C5.57712 8.90825 5.66358 8.702 6.09796 8.702H7.61671C8.00733 8.702 8.14796 8.87596 8.30108 9.277C9.03858 11.4478 10.2969 13.3353 10.8073 13.3353C11.0032 13.3353 11.0886 13.2489 11.0886 12.7603V10.5249C11.024 9.50513 10.4823 9.41867 10.4823 9.04992C10.4893 8.95266 10.5339 8.86193 10.6066 8.79698C10.6793 8.73203 10.7745 8.69796 10.8719 8.702H13.2594C13.5855 8.702 13.6938 8.8645 13.6938 9.25513V12.2718C13.6938 12.5978 13.8344 12.7062 13.9323 12.7062C14.1282 12.7062 14.2792 12.5978 14.6375 12.2395C15.4072 11.3009 16.036 10.2552 16.5042 9.13534C16.5521 9.00082 16.6426 8.88565 16.762 8.80741C16.8815 8.72917 17.0232 8.69215 17.1657 8.702H18.6855C19.1407 8.702 19.2375 8.93013 19.1407 9.25513C18.5881 10.4931 17.9043 11.6682 17.1011 12.7603C16.9375 13.0103 16.8719 13.1405 17.1011 13.4333C17.2521 13.6614 17.7844 14.1062 18.1427 14.5291C18.6635 15.0485 19.0959 15.6495 19.423 16.3083C19.5532 16.7312 19.3355 16.9478 18.9021 16.9478Z" />
+        </g>
+      </symbol>
+    
+      <symbol id="whatsupIcon" viewBox="0 0 25 25">
+        <g>
+          <path
+            d="M12.501 2.08325C18.2542 2.08325 22.9177 6.74679 22.9177 12.4999C22.9177 18.253 18.2542 22.9166 12.501 22.9166C10.6602 22.9196 8.85172 22.4324 7.26145 21.5051L2.08853 22.9166L3.49687 17.7416C2.56884 16.1508 2.08129 14.3416 2.08437 12.4999C2.08437 6.74679 6.74791 2.08325 12.501 2.08325ZM8.95103 7.60409L8.7427 7.61242C8.60782 7.62063 8.47601 7.65607 8.3552 7.71659C8.2422 7.78057 8.13905 7.86057 8.04895 7.95409C7.92395 8.07179 7.85312 8.17388 7.77707 8.27283C7.39178 8.77378 7.18434 9.38879 7.18749 10.0208C7.18957 10.5312 7.32291 11.028 7.53124 11.4926C7.95728 12.4322 8.65832 13.427 9.58332 14.3489C9.80624 14.5708 10.025 14.7937 10.2604 15.001C11.4098 16.0129 12.7794 16.7427 14.2604 17.1322L14.8521 17.2228C15.0448 17.2333 15.2375 17.2187 15.4312 17.2093C15.7346 17.1936 16.0308 17.1115 16.2989 16.9687C16.4354 16.8984 16.5685 16.8219 16.6979 16.7395C16.6979 16.7395 16.7427 16.7103 16.8281 16.6458C16.9687 16.5416 17.0552 16.4676 17.1719 16.3458C17.2583 16.2562 17.3333 16.151 17.3906 16.0312C17.4719 15.8614 17.5531 15.5374 17.5864 15.2676C17.6114 15.0614 17.6042 14.9489 17.601 14.8791C17.5969 14.7676 17.5042 14.652 17.4031 14.603L16.7969 14.3312C16.7969 14.3312 15.8906 13.9364 15.3364 13.6843C15.2785 13.659 15.2163 13.6445 15.1531 13.6416C15.0818 13.6343 15.0098 13.6423 14.9419 13.6651C14.874 13.6879 14.8118 13.725 14.7594 13.7739C14.7542 13.7718 14.6844 13.8312 13.9312 14.7437C13.888 14.8018 13.8285 14.8457 13.7602 14.8698C13.6919 14.8939 13.618 14.8971 13.5479 14.8791C13.48 14.8609 13.4136 14.8379 13.3489 14.8103C13.2198 14.7562 13.175 14.7353 13.0864 14.6978C12.4886 14.4369 11.9351 14.0844 11.4458 13.653C11.3146 13.5385 11.1927 13.4135 11.0677 13.2926C10.6579 12.9002 10.3007 12.4562 10.0052 11.9718L9.94374 11.8728C9.8996 11.8063 9.86391 11.7346 9.83749 11.6593C9.79791 11.5062 9.90103 11.3833 9.90103 11.3833C9.90103 11.3833 10.1542 11.1062 10.2719 10.9562C10.3864 10.8103 10.4833 10.6687 10.5458 10.5676C10.6687 10.3697 10.7073 10.1666 10.6427 10.0093C10.351 9.29679 10.0489 8.58742 9.73853 7.88325C9.67707 7.74367 9.49478 7.64367 9.32916 7.62388C9.27291 7.61763 9.21666 7.61138 9.16041 7.60721C9.02052 7.60026 8.88034 7.60165 8.74061 7.61138L8.94999 7.60304L8.95103 7.60409Z" />
+        </g>
+      </symbol>
+    
+      <symbol id="nextIcon" viewBox="0 0 42 41">
+        <g>
+          <path
+            d="M22.6889 28.8086C22.5634 28.6859 22.4929 28.5195 22.4929 28.3461C22.4929 28.1726 22.5634 28.0063 22.6889 27.8836L29.5867 21.1466L11.5452 21.1466C11.3675 21.1466 11.197 21.0777 11.0713 20.9549C10.9456 20.8322 10.875 20.6657 10.875 20.4921C10.875 20.3185 10.9456 20.1521 11.0713 20.0293C11.197 19.9066 11.3675 19.8376 11.5452 19.8376L29.5867 19.8376L22.6889 13.1007C22.5706 12.9766 22.5061 12.8125 22.5092 12.6429C22.5122 12.4734 22.5826 12.3116 22.7054 12.1917C22.8282 12.0718 22.9938 12.0031 23.1675 12.0001C23.3411 11.9971 23.5092 12.06 23.6362 12.1757L31.679 20.0296C31.8045 20.1523 31.875 20.3187 31.875 20.4921C31.875 20.6656 31.8045 20.8319 31.679 20.9546L23.6362 28.8086C23.5105 28.9312 23.3402 29 23.1626 29C22.985 29 22.8146 28.9312 22.6889 28.8086Z"
+            fill="#201A1A" />
+        </g>
+      </symbol>
+    
+      <symbol id="prevIcon" viewBox="0 0 42 41">
+        <g>
+          <path
+            d="M19.3111 28.8086C19.4366 28.6859 19.5071 28.5195 19.5071 28.3461C19.5071 28.1726 19.4366 28.0063 19.3111 27.8836L12.4133 21.1466L30.4548 21.1466C30.6325 21.1466 30.803 21.0777 30.9287 20.9549C31.0544 20.8322 31.125 20.6657 31.125 20.4921C31.125 20.3185 31.0544 20.1521 30.9287 20.0293C30.803 19.9066 30.6325 19.8376 30.4548 19.8376L12.4133 19.8376L19.3111 13.1007C19.4294 12.9766 19.4939 12.8125 19.4908 12.6429C19.4878 12.4734 19.4174 12.3116 19.2946 12.1917C19.1718 12.0718 19.0062 12.0031 18.8325 12.0001C18.6589 11.9971 18.4908 12.06 18.3638 12.1757L10.321 20.0296C10.1955 20.1523 10.125 20.3187 10.125 20.4921C10.125 20.6656 10.1955 20.8319 10.321 20.9546L18.3638 28.8086C18.4895 28.9312 18.6598 29 18.8374 29C19.015 29 19.1854 28.9312 19.3111 28.8086Z"
+            fill="#201A1A" />
+        </g>
+      </symbol>
+    
+      <symbol id="telIcon" viewBox="0 0 22 22">
+        <g>
+          <path
+            d="M17.9563 18.875C16.1333 18.875 14.3323 18.4776 12.5531 17.6828C10.774 16.888 9.15521 15.7615 7.69688 14.3031C6.23854 12.8448 5.11198 11.226 4.31719 9.44688C3.5224 7.66771 3.125 5.86667 3.125 4.04375C3.125 3.78125 3.2125 3.5625 3.3875 3.3875C3.5625 3.2125 3.78125 3.125 4.04375 3.125H7.5875C7.79167 3.125 7.97396 3.19427 8.13438 3.33281C8.29479 3.47135 8.38958 3.63542 8.41875 3.825L8.9875 6.8875C9.01667 7.12083 9.00938 7.31771 8.96563 7.47813C8.92188 7.63854 8.84167 7.77708 8.725 7.89375L6.60313 10.0375C6.89479 10.5771 7.24115 11.0984 7.64219 11.6016C8.04323 12.1047 8.48438 12.5896 8.96563 13.0563C9.41771 13.5083 9.89167 13.9276 10.3875 14.3141C10.8833 14.7005 11.4083 15.0542 11.9625 15.375L14.0188 13.3188C14.15 13.1875 14.3214 13.0891 14.5328 13.0234C14.7443 12.9578 14.9521 12.9396 15.1562 12.9688L18.175 13.5813C18.3792 13.6396 18.5469 13.7453 18.6781 13.8984C18.8094 14.0516 18.875 14.2229 18.875 14.4125V17.9563C18.875 18.2188 18.7875 18.4375 18.6125 18.6125C18.4375 18.7875 18.2188 18.875 17.9563 18.875Z"/>
+        </g>
+      </symbol>
+    
+      <symbol id="arrowBot" viewBox="0 0 41 40">
+        <g>
+          <path d="M20.5 28.8211L10.5 18.7172L12.8333 16.3596L20.5 24.1059L28.1667 16.3596L30.5 18.7172L20.5 28.8211Z" fill="#FFFCF4"/>
+        </g>
+      </symbol>
+    
+      <symbol id="closeIcon" viewBox="0 0 25 24">
+        <g>
+          <path d="M7.20139 19L5.80139 17.6L11.4014 12L5.80139 6.4L7.20139 5L12.8014 10.6L18.4014 5L19.8014 6.4L14.2014 12L19.8014 17.6L18.4014 19L12.8014 13.4L7.20139 19Z" fill="#131010"/>
+        </g>
+      </symbol>
+    
+      <symbol id="logoPreload" viewBox="0 0 36 44">
+        <g>
+          <ellipse cx="20.7224" cy="27.3663" rx="11.5253" ry="11.9368" fill="#C08B25"/>
+          <path d="M1.51343 0.839966C1.51343 9.68207 22.0029 12.3347 22.0029 24.2715C27.5522 24.2715 29.6865 23.3873 30.5402 26.4821M3.22089 7.47154C3.22089 14.9873 30.9671 23.3873 10.9045 33.9979C20.7223 37.9768 14.7462 40.6294 13.4656 40.6294M34.382 27.8084C22.0029 29.1347 14.3194 34.8821 22.0029 41.5137C21.6614 42.5747 19.2995 42.84 18.1612 42.84" stroke="#111111" stroke-width="1.26" stroke-linecap="round" stroke-linejoin="round"/>
+        </g>
+      </symbol>
+    </svg>
+    <div class="page">
+        
+        <!-- Header -->
+
+        <header class="header container">
+        
+          <button class="menu-button">
+            <span class="burger-button-close">
+              <span id="first-line-burger"></span>
+              <span id="second-line-burger"></span>
+              <span id="third-line-burger"></span>
+            </span>
+          </button>
+        
+          <a href="#" class="header__logo">
+            <img src="./assets/images/logo/logo.svg" alt="logo">
+          </a>
+        
+          <div class="menu">
+            <nav>
+              <ul>
+                <li class="active"><a href="#">Главная</a></li>
+                <li><a href="#">О компании</a></li>
+                <li><a href="#">Наши работы</a></li>
+                <li><a href="#">Отзывы</a></li>
+                <li><a href="#">Статьи</a></li>
+                <li><a href="#">Контакты</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="header__contacts">
+            <a href="#" class="telegram-contact">
+              <svg><use href='#telegramIcon'></use></svg>
+            </a>
+        
+            <a class="header__tel" href="tel:+79255179971">
+              <span>+7 (925) 517-99-71</span>
+              <svg><use href='#telIcon'></use></svg>
+            </a>
+          </div>
+        
+        </header>
+        
+        <div class="header-cork"></div>
+        <!-- Main content -->
+        <main>
+
+            <section class="preview --reviews container dark">
+            
+              <h1 class="h1 text-center"><span class="sm-hidden">полезные</span> статьи</h1>
+              <div class="ourWorks-arrow onloadarrow">
+                <svg>
+                  <use href='#arrowBot'></use>
+                </svg>
+              </div>
+            
+              <picture>
+                <source srcset="./assets/images/about/about-sm.jpg" media="(max-width:500px)">
+                <img class="back-cover" src="./assets/images/about/about.jpg" alt="main">
+              </picture>
+            </section>
+            
+            <div class="articles-list-float container dark py-80">
+              <ul>
+            
+              
+                <li class="articles-float">
+            
+                  <div class="img-cover absolute">
+                    <img src="./assets/images/articles/articles-1.jpg" class="mobile-hidden" alt="articles">
+                  </div>
+            
+                  <div class="articles-float-content">
+            
+                    <h3>Заголовок статьи</h3>
+                    <p>
+                      Vivamus efficitur fermentum est eu ultricies. Donec aliquam porta metus, consequat laoreet nunc venenatis at. Morbi at dui eu mauris laoreet porttitor. Proin a magna vel ex convallis euismod. Suspendisse nec quam quis nunc imperdiet porta vitae eget nibh. Proin ullamcorper efficitur orci, aliquet sollicitudin ipsum vehicula eu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+                      Vivamus efficitur fermentum est eu ultricies. Donec aliquam porta metus, consequat laoreet nunc venenatis at. Morbi at dui eu mauris laoreet porttitor. Proin a magna vel ex convallis euismod. Suspendisse nec quam quis nunc imperdiet porta vitae eget nibh. Proin ullamcorper efficitur orci, aliquet sollicitudin ipsum vehicula eu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+                      Vivamus efficitur fermentum est eu ultricies. Donec aliquam porta metus, consequat laoreet nunc venenatis at. Morbi at dui eu mauris laoreet porttitor. Proin a magna vel ex convallis euismod. Suspendisse nec quam quis nunc imperdiet porta vitae eget nibh. Proin ullamcorper efficitur orci, aliquet sollicitudin ipsum vehicula eu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+                    </p>
+                  </div>
+            
+                  <button class="articles-button">
+                    <span class="readMore">Читать целиком</span><span class="readLess">Скрыть</span>
+                  </button>
+                </li>
+              
+                <li class="articles-float">
+            
+                  <div class="img-cover absolute">
+                    <img src="./assets/images/articles/articles-1.jpg" class="mobile-hidden" alt="articles">
+                  </div>
+            
+                  <div class="articles-float-content">
+            
+                    <h3>Заголовок статьи</h3>
+                    <p>
+                      Vivamus efficitur fermentum est eu ultricies. Donec aliquam porta metus, consequat laoreet nunc venenatis at. Morbi at dui eu mauris laoreet porttitor. Proin a magna vel ex convallis euismod. Suspendisse nec quam quis nunc imperdiet porta vitae eget nibh. Proin ullamcorper efficitur orci, aliquet sollicitudin ipsum vehicula eu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+                      Vivamus efficitur fermentum est eu ultricies. Donec aliquam porta metus, consequat laoreet nunc venenatis at. Morbi at dui eu mauris laoreet porttitor. Proin a magna vel ex convallis euismod. Suspendisse nec quam quis nunc imperdiet porta vitae eget nibh. Proin ullamcorper efficitur orci, aliquet sollicitudin ipsum vehicula eu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+                      Vivamus efficitur fermentum est eu ultricies. Donec aliquam porta metus, consequat laoreet nunc venenatis at. Morbi at dui eu mauris laoreet porttitor. Proin a magna vel ex convallis euismod. Suspendisse nec quam quis nunc imperdiet porta vitae eget nibh. Proin ullamcorper efficitur orci, aliquet sollicitudin ipsum vehicula eu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+                    </p>
+                  </div>
+            
+                  <button class="articles-button">
+                    <span class="readMore">Читать целиком</span><span class="readLess">Скрыть</span>
+                  </button>
+                </li>
+              
+                <li class="articles-float">
+            
+                  <div class="img-cover absolute">
+                    <img src="./assets/images/articles/articles-1.jpg" class="mobile-hidden" alt="articles">
+                  </div>
+            
+                  <div class="articles-float-content">
+            
+                    <h3>Заголовок статьи</h3>
+                    <p>
+                      Vivamus efficitur fermentum est eu ultricies. Donec aliquam porta metus, consequat laoreet nunc venenatis at. Morbi at dui eu mauris laoreet porttitor. Proin a magna vel ex convallis euismod. Suspendisse nec quam quis nunc imperdiet porta vitae eget nibh. Proin ullamcorper efficitur orci, aliquet sollicitudin ipsum vehicula eu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+                      Vivamus efficitur fermentum est eu ultricies. Donec aliquam porta metus, consequat laoreet nunc venenatis at. Morbi at dui eu mauris laoreet porttitor. Proin a magna vel ex convallis euismod. Suspendisse nec quam quis nunc imperdiet porta vitae eget nibh. Proin ullamcorper efficitur orci, aliquet sollicitudin ipsum vehicula eu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+                      Vivamus efficitur fermentum est eu ultricies. Donec aliquam porta metus, consequat laoreet nunc venenatis at. Morbi at dui eu mauris laoreet porttitor. Proin a magna vel ex convallis euismod. Suspendisse nec quam quis nunc imperdiet porta vitae eget nibh. Proin ullamcorper efficitur orci, aliquet sollicitudin ipsum vehicula eu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+                    </p>
+                  </div>
+            
+                  <button class="articles-button">
+                    <span class="readMore">Читать целиком</span><span class="readLess">Скрыть</span>
+                  </button>
+                </li>
+              
+                <li class="articles-float">
+            
+                  <div class="img-cover absolute">
+                    <img src="./assets/images/articles/articles-1.jpg" class="mobile-hidden" alt="articles">
+                  </div>
+            
+                  <div class="articles-float-content">
+            
+                    <h3>Заголовок статьи</h3>
+                    <p>
+                      Vivamus efficitur fermentum est eu ultricies. Donec aliquam porta metus, consequat laoreet nunc venenatis at. Morbi at dui eu mauris laoreet porttitor. Proin a magna vel ex convallis euismod. Suspendisse nec quam quis nunc imperdiet porta vitae eget nibh. Proin ullamcorper efficitur orci, aliquet sollicitudin ipsum vehicula eu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+                      Vivamus efficitur fermentum est eu ultricies. Donec aliquam porta metus, consequat laoreet nunc venenatis at. Morbi at dui eu mauris laoreet porttitor. Proin a magna vel ex convallis euismod. Suspendisse nec quam quis nunc imperdiet porta vitae eget nibh. Proin ullamcorper efficitur orci, aliquet sollicitudin ipsum vehicula eu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+                      Vivamus efficitur fermentum est eu ultricies. Donec aliquam porta metus, consequat laoreet nunc venenatis at. Morbi at dui eu mauris laoreet porttitor. Proin a magna vel ex convallis euismod. Suspendisse nec quam quis nunc imperdiet porta vitae eget nibh. Proin ullamcorper efficitur orci, aliquet sollicitudin ipsum vehicula eu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+                    </p>
+                  </div>
+            
+                  <button class="articles-button">
+                    <span class="readMore">Читать целиком</span><span class="readLess">Скрыть</span>
+                  </button>
+                </li>
+              
+                <li class="articles-float">
+            
+                  <div class="img-cover absolute">
+                    <img src="./assets/images/articles/articles-1.jpg" class="mobile-hidden" alt="articles">
+                  </div>
+            
+                  <div class="articles-float-content">
+            
+                    <h3>Заголовок статьи</h3>
+                    <p>
+                      Vivamus efficitur fermentum est eu ultricies. Donec aliquam porta metus, consequat laoreet nunc venenatis at. Morbi at dui eu mauris laoreet porttitor. Proin a magna vel ex convallis euismod. Suspendisse nec quam quis nunc imperdiet porta vitae eget nibh. Proin ullamcorper efficitur orci, aliquet sollicitudin ipsum vehicula eu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+                      Vivamus efficitur fermentum est eu ultricies. Donec aliquam porta metus, consequat laoreet nunc venenatis at. Morbi at dui eu mauris laoreet porttitor. Proin a magna vel ex convallis euismod. Suspendisse nec quam quis nunc imperdiet porta vitae eget nibh. Proin ullamcorper efficitur orci, aliquet sollicitudin ipsum vehicula eu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+                      Vivamus efficitur fermentum est eu ultricies. Donec aliquam porta metus, consequat laoreet nunc venenatis at. Morbi at dui eu mauris laoreet porttitor. Proin a magna vel ex convallis euismod. Suspendisse nec quam quis nunc imperdiet porta vitae eget nibh. Proin ullamcorper efficitur orci, aliquet sollicitudin ipsum vehicula eu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+                    </p>
+                  </div>
+            
+                  <button class="articles-button">
+                    <span class="readMore">Читать целиком</span><span class="readLess">Скрыть</span>
+                  </button>
+                </li>
+              
+              </ul>
+            </div>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer container">
+          <div class="footer-inner">
+            <nav>
+              <ul>
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">О компании</a></li>
+                <li><a href="#">Наши работы</a></li>
+                <li><a href="#">Отзывы</a></li>
+                <li><a href="#">Статьи</a></li>
+                <li><a href="#">Контакты</a></li>
+              </ul>
+            </nav>
+        
+            <a href="#" class="footer__logo">
+              <img src="./assets/images/logo/logo.svg" alt="logo">
+            </a>
+        
+            <ul class="footer-contacts">
+              <li>Москва, <br class="sm-block">ул. Новорязанская, <br>д. 26к1, Loft Factory</li>
+              <li><a href="tel:+79255179971" class="footer-tel">+7 (925) 517-99-71</a></li>
+              <li><a href="mailto:info@kondoor.ru">info@kondoor.ru</a></li>
+              <li>
+                <ul class="socials">
+                  <li><a href="#"><svg><use href='#telegramIcon'></use></svg></a></li>
+                  <li><a href="#"><svg><use href='#vkIcon'></use></svg></a></li>
+                  <li><a href="#"><svg><use href='#whatsupIcon'></use></svg></a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-bot">Изображение от <a href="#"> Freepik</a></div>
+        </footer>
+        <!-- Back to Top-->
+        <button class="backToTop">
+          <svg><use href='#prevIcon'></use></svg>
+        </button>
+    </div>
+
+    <!-- JS -->
+    <script src="assets/js/vendor.js?1"></script>
+    <script src="assets/js/app.js?2"></script>
+    <script src="assets/js/temp.js?1"></script>
+    <script>
+      window.onload = function () {
+        document.documentElement.classList.add('loaded');
+      }
+    </script>
+</body>
+
+</html>
