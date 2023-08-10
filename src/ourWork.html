@@ -20,8 +20,77 @@
 
 <section class="ourWork-list container dark py-80">
   <ul>
-    @for(let i = 1; i <= 9; i++) { <li>
-      <button class="ourWork-button" data-aos="flip-left">
+
+    <li>
+      <button class="ourWork-button" data-aos="fade-up">
+        <img src="./assets/images/ourWork/list/1.jpg" alt="ourWork">
+      </button>
+
+      <div class="ourWork-overlay container">
+        <div class="ourWork-modal">
+
+          <div class="ourWork-top">
+            <h2 class="ourWork-title">
+              Гардеробная комната.
+            </h2>
+            <button class="ourWork-close"><svg>
+                <use href='#closeIcon'></use>
+              </svg></button>
+          </div>
+
+          <div class="ourWork-swiper-wrapper">
+            <div class="swiper ourWork-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="./assets/images/ourWork/list/1.jpg" alt="ourWork">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="./assets/images/ourWork/list/2.jpg" alt="ourWork">
+                </div>
+              </div>
+            </div>
+
+            <button class="arrow-button next"><svg>
+                <use href='#nextIcon'></use>
+              </svg></button>
+            <button class="arrow-button prev"><svg>
+                <use href='#prevIcon'></use>
+              </svg></button>
+          </div>
+
+          <div class="ourWork-about">
+            <ul>
+              <li>
+                <div>Материалы</div>
+                <div>МДФ с отделкой под дуб</div>
+              </li>
+
+              <li>
+                <div>Фурнитура</div>
+                <div>
+                  <p>Металлические рейки для вешалок</p>
+                  <p>Направляющие в выдвижных ящиках Blum</p>
+                </div>
+              </li>
+
+              <li>
+                <div>Особенности</div>
+                <div>
+                  <p>Встроенные световые панели</p>
+                  <p>Зеркальные панели на выдвижных ящиках</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </li>
+
+    @for(let i = 2; i <= 9; i++) { 
+      <li>
+      <button class="ourWork-button" data-aos="fade-up">
         <img src="./assets/images/ourWork/list/`+i+`.jpg" alt="ourWork">
       </button>
 

@@ -38,6 +38,9 @@
     justify-content: space-between;
     gap: 1.956rem;
   }
+  li {
+    will-change: transform;
+  }
 }
 
 .reviews-list-one-column {

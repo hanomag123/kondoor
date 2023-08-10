@@ -31,6 +31,7 @@
   }
 
   li {
+    will-change: transform, opacity;
     a {
       display: block;
       padding: 1rem;
@@ -71,6 +72,7 @@
     line-height: 2rem;
     margin-top: 1rem;
     min-height: 0;
+    font-weight: 700;
   }
 }
 
@@ -117,6 +119,7 @@
   height: 28rem;
   width: 100%;
   display: block;
+  will-change: transform;
   @include breakpoint($sm-bp) {
     height: 13rem; 
   }

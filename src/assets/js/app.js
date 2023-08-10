@@ -224,7 +224,6 @@ document.addEventListener("DOMContentLoaded", () => {
           slidesPerView: 'auto',
           speed: 400,
           grabCursor: true,
-          freeMode: true,
           centeredSlides: true,
           autoplay: {
             delay: 5000,
@@ -244,18 +243,24 @@ document.addEventListener("DOMContentLoaded", () => {
   if (ourWorksSwipers.length) {
     ourWorksSwipers.forEach(el => {
       const swiper = el.querySelector('.ourWork-swiper');
+      const slides = el.querySelectorAll('.swiper-slide');
       const next = el.querySelector('.next');
       const prev = el.querySelector('.prev');
-      new Swiper(swiper, {
-        loop: true,
-        slidesPerView: 'auto',
-        speed: 400,
-        grabCursor: true,
-        navigation: {
-          nextEl: next,
-          prevEl: prev,
-        },
-      })
+      if (slides.length > 1) {
+        new Swiper(swiper, {
+          loop: slides.length,
+          slidesPerView: 'auto',
+          speed: 400,
+          grabCursor: true,
+          navigation: {
+            nextEl: next,
+            prevEl: prev,
+          },
+        })
+      } else {
+        next.hidden = true;
+        prev.hidden = true;
+      }
     })
   }
 
@@ -482,21 +487,20 @@ document.addEventListener("DOMContentLoaded", () => {
       el.addEventListener('click', function () {
         this.classList.toggle('active');
         if (this.classList.contains('active')) {
-          this.nextElementSibling.style.maxHeight = this.nextElementSibling.scrollHeight + 'px';
+          this.previousElementSibling.style.maxHeight = this.previousElementSibling.scrollHeight + 'px';
         } else {
-          this.nextElementSibling.style.maxHeight = null;
+          this.previousElementSibling.style.maxHeight = null;
         }
       })
     })
   }
 
-  const articlesWrapper = document.querySelectorAll('.articles-wrapper');
+  const articlesWrapper = document.querySelectorAll('.articles-float-content');
 
   if (articlesWrapper.length) {
     articlesWrapper.forEach(el => {
-
       if (el.scrollHeight <= el.offsetHeight) {
-        const btn = el.previousElementSibling;
+        const btn = el.nextElementSibling;
         if (btn.classList.contains('articles-button')) {
           btn.hidden = true;
         }
@@ -509,24 +513,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (maxHeight.length) {
       maxHeight.forEach(el => {
-        if (el.classList.contains('articles-wrapper')) {
+        if (el.classList.contains('articles-float-content')) {
           el.style.maxHeight = el.scrollHeight + 'px';
         }
       })
     }
-
-    if (articlesWrapper.length) {
-      articlesWrapper.forEach(el => {
-  
-        if (el.scrollHeight <= el.offsetHeight) {
-          const btn = el.previousElementSibling;
-          if (btn.classList.contains('articles-button')) {
-            btn.hidden = true;
-          }
-        }
-      })
-    }
   })
+
+  const absoluteImg = document.querySelectorAll('.articles-float .absolute');
+
+  if (absoluteImg.length) {
+    absoluteImg.forEach(el => {
+      if (el.nextElementSibling.classList.contains('articles-float-content')) {
+        el.nextElementSibling.insertAdjacentHTML('afterBegin', el.innerHTML)
+      }
+    })
+  }
 
 });
 

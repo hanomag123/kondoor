@@ -13,32 +13,30 @@
   </picture>
 </section>
 
-<div class="articles-list container dark py-80">
+<div class="articles-list-float container dark py-80">
   <ul>
-    @for(let i=1; i<=5; i++) {
-      <li  data-aos="fade-up">
-        <div class="img-cover">
-          <img src="./assets/images/articles/articles-1.jpg" alt="articles">
-        </div>
-  
-          <div class="articles-content">
-            <div class="articles-title">Заголовок статьи</div>
-            <div class="articles-right">
-              <button class="articles-button">
-                <span class="readMore">Читать целиком</span>
-                <span class="readLess">Скрыть</span>
-              </button>
-              <div class="articles-wrapper">
-                <div class="articles-text">
-                  Vivamus efficitur fermentum est eu ultricies. Donec aliquam porta metus, consequat laoreet nunc venenatis at. Morbi at dui eu mauris laoreet porttitor. Proin a magna vel ex convallis euismod. Suspendisse nec quam quis nunc imperdiet porta vitae eget nibh. Proin ullamcorper efficitur orci, aliquet sollicitudin ipsum vehicula eu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
-                  Vivamus efficitur fermentum est eu ultricies. Donec aliquam porta metus, consequat laoreet nunc venenatis at. Morbi at dui eu mauris laoreet porttitor. Proin a magna vel ex convallis euismod. Suspendisse nec quam quis nunc imperdiet porta vitae eget nibh. Proin ullamcorper efficitur orci, aliquet sollicitudin ipsum vehicula eu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
-  
-                </div>
-              </div>
-            </div>
-          </div>
-  
-      </li>
-    }
+
+  @for(let i=1; i<=5; i++) {
+    <li class="articles-float">
+
+      <div class="img-cover absolute">
+        <img src="./assets/images/articles/articles-1.jpg" class="mobile-hidden" alt="articles">
+      </div>
+
+      <div class="articles-float-content">
+
+        <h3>Заголовок статьи</h3>
+        <p>
+          Vivamus efficitur fermentum est eu ultricies. Donec aliquam porta metus, consequat laoreet nunc venenatis at. Morbi at dui eu mauris laoreet porttitor. Proin a magna vel ex convallis euismod. Suspendisse nec quam quis nunc imperdiet porta vitae eget nibh. Proin ullamcorper efficitur orci, aliquet sollicitudin ipsum vehicula eu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+          Vivamus efficitur fermentum est eu ultricies. Donec aliquam porta metus, consequat laoreet nunc venenatis at. Morbi at dui eu mauris laoreet porttitor. Proin a magna vel ex convallis euismod. Suspendisse nec quam quis nunc imperdiet porta vitae eget nibh. Proin ullamcorper efficitur orci, aliquet sollicitudin ipsum vehicula eu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+          Vivamus efficitur fermentum est eu ultricies. Donec aliquam porta metus, consequat laoreet nunc venenatis at. Morbi at dui eu mauris laoreet porttitor. Proin a magna vel ex convallis euismod. Suspendisse nec quam quis nunc imperdiet porta vitae eget nibh. Proin ullamcorper efficitur orci, aliquet sollicitudin ipsum vehicula eu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+        </p>
+      </div>
+
+      <button class="articles-button">
+        <span class="readMore">Читать целиком</span><span class="readLess">Скрыть</span>
+      </button>
+    </li>
+  }
   </ul>
 </div>

@@ -1103,7 +1103,7 @@
     mix-blend-mode: normal;
     border: 0.1rem solid var(--black);
     right: 2.4rem;
-    bottom: 2;
+    bottom: 2rem;
   }
 
   @include breakpoint($sm-bp) {
@@ -1193,5 +1193,18 @@
     width: 3rem;
     height: 3rem;
     fill: var(--black);
+  }
+}
+
+.page-link {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: 0.1rem;
+  transition: color .3s;
+  &:hover {
+    color: #878787;
   }
 }

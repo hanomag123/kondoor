@@ -6,6 +6,7 @@
   color: var(--white);
   @include breakpoint($xl-bp) {
     padding-top: 4rem;
+    padding-bottom: 5rem;
   }
   nav {
     font-size: 2rem;
@@ -21,11 +22,23 @@
     ul {
       display: flex;
       flex-direction: column;
-      gap: 3.8rem;
+      gap: 2.6rem;
       @include breakpoint($xl-bp) {
         gap: 1.5rem;
         align-items: center;
+        display: grid;
+        grid-template-columns: repeat(2, max-content);
+        grid-auto-flow: column;
+        grid-template-rows: repeat(3, 1fr);
+        width: 100%;
+        justify-content: space-between;
+        li {
+          &:nth-child(n + 3) {
+            justify-self: end;
+          }
+        }
       }
+
     }
   }
 }
@@ -43,7 +56,7 @@
     align-items: center;
     flex-direction: column;
     padding: 0;
-    gap: 2rem;
+    gap: 4.5rem;
   }
 }
 
