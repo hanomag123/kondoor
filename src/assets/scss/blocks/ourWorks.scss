@@ -32,6 +32,7 @@
 
   li {
     will-change: transform, opacity;
+
     a {
       display: block;
       padding: 1rem;
@@ -87,19 +88,19 @@
   }
 }
 
-.ourWork-list {
-  ul {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10.5rem;
-    @include breakpoint($xl-bp) {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 2rem;
-    }
 
-    li {
-      width: 100%;
-    }
+.ourWork-ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10.5rem;
+
+  @include breakpoint($xl-bp) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  li {
+    width: 100%;
   }
 }
 
@@ -108,6 +109,7 @@
   line-height: 3.2rem;
   text-align: center;
   margin-top: 2.5rem;
+
   @include breakpoint($xl-bp) {
     font-size: 1.4rem;
     line-height: 1.9rem;
@@ -120,9 +122,11 @@
   width: 100%;
   display: block;
   will-change: transform;
+
   @include breakpoint($sm-bp) {
-    height: 13rem; 
+    height: 13rem;
   }
+
   &:hover {
     &::before {
       opacity: 1;
@@ -186,8 +190,10 @@
   max-width: 92.6rem;
   max-height: 100%;
   overflow: auto;
+
   @include breakpoint($sm-bp) {
     padding: 4rem 2rem;
+    grid-template-columns: 1fr;
   }
 }
 
@@ -196,6 +202,10 @@
   justify-content: space-between;
   align-items: center;
   grid-column: 2 span;
+
+  @include breakpoint($xl-bp) {
+    grid-column: 1 span;
+  }
 }
 
 .ourWork-title {
@@ -204,6 +214,7 @@
   font-weight: 400;
   line-height: 3.2rem;
   text-transform: capitalize;
+
   @include breakpoint($sm-bp) {
     font-size: 2rem;
     line-height: 2.2rem;
@@ -228,13 +239,16 @@
 .ourWork-swiper-wrapper {
   height: 46.1rem;
   position: relative;
+
   @include breakpoint($xl-bp) {
     padding-left: 1.62rem;
     padding-right: 1.62rem;
   }
+
   @include breakpoint($sm-bp) {
     height: 23.9rem;
   }
+
   .swiper {
     height: 100%;
 
@@ -260,18 +274,23 @@
     left: 0;
     z-index: 10;
     transform: translate3d(-50%, -50%, 0);
+
     @include breakpoint($sm-bp) {
       left: 1.62rem;
     }
+
     &:hover {
       transform: translate3d(calc(-50% - 0.3rem), -50%, 0);
     }
   }
+
   .next {
     left: 100%;
+
     @include breakpoint($sm-bp) {
       left: calc(100% - 1.62rem);
     }
+
     &:hover {
       transform: translate3d(calc(-50% + 0.3rem), -50%, 0);
     }
@@ -282,6 +301,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-top: 2.5rem;
 
   @include breakpoint($xl-bp) {
     grid-column: 2 span;
@@ -297,10 +317,12 @@
     display: grid;
     grid-template-columns: 1fr 26.7rem;
     gap: 3.5rem;
+
     @include breakpoint($sm-bp) {
       grid-template-columns: 9.4rem 16.7rem;
       gap: 1.9rem;
     }
+
     &>* {
       font-size: 1.4rem;
       font-weight: 400;
@@ -316,3 +338,78 @@
     }
   }
 }
+
+.ourWork-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.ourWork-btn {
+  margin: 0 auto;
+}
+.ourWork-accordion-list {
+  margin-top: 4rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+
+  .accordion-inner {
+    font-size: inherit;
+    line-height: inherit;
+  }
+  @include breakpoint($xl-bp) {
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 2.5rem;
+  }
+}
+.ourWork-accordion {
+  border-bottom: 0.1rem solid rgb(224, 224, 224);
+  padding-bottom: 2rem;
+  .accordion-inner > *:first-child {
+    margin-top: 2rem;
+    @include breakpoint($xl-bp) {
+      margin-top: 1.5rem;
+    }
+  }
+  @include breakpoint($xl-bp) {
+    padding-bottom: 1.5rem;
+  }
+}
+.ourWork-accordion-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  font-weight: 600;
+  font-family: inherit;
+  transition: color .3s;
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    color: var(--yellow);
+    svg {
+      fill: var(--yellow);
+    }
+  }
+  &.active {
+    svg {
+      transform: rotate(90deg);
+    }
+    & + .accordion-block {
+      grid-template-rows: 1fr;
+    }
+  }
+
+  svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: var(--brown);
+  }
+}
+

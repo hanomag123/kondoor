@@ -19,77 +19,9 @@
 </section>
 
 <section class="ourWork-list container dark py-80">
-  <ul>
+  <ul class="ourWork-ul">
 
-    <li>
-      <button class="ourWork-button" data-aos="fade-up">
-        <img src="./assets/images/ourWork/list/1.jpg" alt="ourWork">
-      </button>
-
-      <div class="ourWork-overlay container">
-        <div class="ourWork-modal">
-
-          <div class="ourWork-top">
-            <h2 class="ourWork-title">
-              Гардеробная комната.
-            </h2>
-            <button class="ourWork-close"><svg>
-                <use href='#closeIcon'></use>
-              </svg></button>
-          </div>
-
-          <div class="ourWork-swiper-wrapper">
-            <div class="swiper ourWork-swiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <img src="./assets/images/ourWork/list/1.jpg" alt="ourWork">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="./assets/images/ourWork/list/2.jpg" alt="ourWork">
-                </div>
-              </div>
-            </div>
-
-            <button class="arrow-button next"><svg>
-                <use href='#nextIcon'></use>
-              </svg></button>
-            <button class="arrow-button prev"><svg>
-                <use href='#prevIcon'></use>
-              </svg></button>
-          </div>
-
-          <div class="ourWork-about">
-            <ul>
-              <li>
-                <div>Материалы</div>
-                <div>МДФ с отделкой под дуб</div>
-              </li>
-
-              <li>
-                <div>Фурнитура</div>
-                <div>
-                  <p>Металлические рейки для вешалок</p>
-                  <p>Направляющие в выдвижных ящиках Blum</p>
-                </div>
-              </li>
-
-              <li>
-                <div>Особенности</div>
-                <div>
-                  <p>Встроенные световые панели</p>
-                  <p>Зеркальные панели на выдвижных ящиках</p>
-                </div>
-              </li>
-            </ul>
-          </div>
-
-        </div>
-      </div>
-    </li>
-
-    @for(let i = 2; i <= 9; i++) { 
-      <li>
+    @for(let i = 1; i <= 9; i++) { <li>
       <button class="ourWork-button" data-aos="fade-up">
         <img src="./assets/images/ourWork/list/`+i+`.jpg" alt="ourWork">
       </button>
@@ -106,43 +38,108 @@
               </svg></button>
           </div>
 
-          <div class="ourWork-swiper-wrapper">
-            <div class="swiper ourWork-swiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <img src="./assets/images/ourWork/list/`+i+`.jpg" alt="ourWork">
+          <div class="ourWork-left">
+            <div class="ourWork-swiper-wrapper">
+              <div class="swiper ourWork-swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="./assets/images/ourWork/list/`+i+`.jpg" alt="ourWork">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./assets/images/ourWork/list/`+i+`.jpg" alt="ourWork">
+                  </div>
                 </div>
               </div>
+
+              <button class="arrow-button next"><svg>
+                  <use href='#nextIcon'></use>
+                </svg></button>
+              <button class="arrow-button prev"><svg>
+                  <use href='#prevIcon'></use>
+                </svg></button>
             </div>
 
-            <button class="arrow-button next"><svg>
-                <use href='#nextIcon'></use>
-              </svg></button>
-            <button class="arrow-button prev"><svg>
-                <use href='#prevIcon'></use>
-              </svg></button>
+            <div class="ourWork-about">
+              <ul>
+                <li>
+                  <div>Материалы</div>
+                  <div>МДФ с отделкой под дуб</div>
+                </li>
+
+                <li>
+                  <div>Фурнитура</div>
+                  <div>
+                    <p>Металлические рейки для вешалок</p>
+                    <p>Направляющие в выдвижных ящиках Blum</p>
+                  </div>
+                </li>
+
+                <li>
+                  <div>Особенности</div>
+                  <div>
+                    <p>Встроенные световые панели</p>
+                    <p>Зеркальные панели на выдвижных ящиках</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
 
-          <div class="ourWork-about">
-            <ul>
-              <li>
-                <div>Материалы</div>
-                <div>МДФ с отделкой под дуб</div>
-              </li>
+          <div class="ourWork-right">
+            <button data-modal="#callback" class="ourWork-btn page-button">Оставить заявку</button>
 
-              <li>
-                <div>Фурнитура</div>
-                <div>
-                  <p>Металлические рейки для вешалок</p>
-                  <p>Направляющие в выдвижных ящиках Blum</p>
+            <ul class="ourWork-accordion-list">
+              <li class="ourWork-accordion">
+                <button class="ourWork-accordion-button">
+                  Доставка
+                  <svg>
+                    <use href='#arrow-r-icon'></use>
+                  </svg>
+                </button>
+
+                <div class="accordion-block">
+                  <div class="accordion-inner">
+                    <p>
+                      Доставка товара, замер и монтаж <strong>входят</strong> в стоимость заказа. <strong>Доставка
+                        осуществляется компанией Kondoor по всем городам России.</strong>
+                    </p>
+                  </div>
                 </div>
               </li>
+              <li class="ourWork-accordion">
+                <button class="ourWork-accordion-button">
+                  Оплата
+                  <svg>
+                    <use href='#arrow-r-icon'></use>
+                  </svg>
+                </button>
 
-              <li>
-                <div>Особенности</div>
-                <div>
-                  <p>Встроенные световые панели</p>
-                  <p>Зеркальные панели на выдвижных ящиках</p>
+                <div class="accordion-block">
+                  <div class="accordion-inner">
+                    <p>
+                      Доставка товара, замер и монтаж <strong>входят</strong> в стоимость заказа. <strong>Доставка
+                        осуществляется компанией Kondoor по всем городам России.</strong>
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="ourWork-accordion">
+                <button class="ourWork-accordion-button">
+                  Гарантия 12 месяцев
+                  <svg>
+                    <use href='#arrow-r-icon'></use>
+                  </svg>
+                </button>
+
+                <div class="accordion-block">
+                  <div class="accordion-inner">
+                    <p>
+                      Гарантийный срок на всю нашу мебель <strong>12 месяцев</strong>, при этом есть
+                      возможность пересмотра и увеличения этого срока в зависимости от Ваших
+                      потребностей и желаний. При возникновении каких-либо проблем или
+                      дефектов в течение этого срока, мы будем рады помочь вам в ремонте.
+                    </p>
+                  </div>
                 </div>
               </li>
             </ul>

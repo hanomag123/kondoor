@@ -127,3 +127,23 @@
     transform: unset;
   }
 }
+
+.header-btn {
+  background-color: var(--yellow);
+  color: var(--white);
+  border-radius: 1rem;
+  font-family: inherit;
+  font-weight: 600;
+  padding: 1rem;
+  position: relative;
+  top: 0.8rem;
+  border: 0.1rem solid var(--yellow);
+  transition: background-color .3s;
+  &:hover {
+    background-color: var(--transparent);
+  }
+
+  @include breakpoint($xl-bp) {
+    position: static;
+  }
+}

@@ -8,7 +8,7 @@ title: Главная
   <section class="preview container dark">
 
     <h1 class="h1 text-center max-w-853">Kondoor - это любая мебель на заказ <br class="sm-block">от производителя</h1>
-    <button class="page-button mt-60 onloadanim" data-scroll="#mainForm">Заказать изделие</button>
+    <button class="page-button mt-60 onloadanim" data-modal="#callback">Заказать изделие</button>
 
     <picture>
       <source srcset="./assets/images/main/main-sm.jpg" media="(max-width:500px)">
@@ -39,31 +39,90 @@ title: Главная
         </li>
       </ul>
 
-      <a href="#" class="page-button" data-aos="fade-left">Подробнее о нас</a>
+    </div>
+
+    <div class="mt-80">
+      <h2 class="h2" data-aos="fade-up">Наши ценности</h2>
+    
+      <ul class="aboutValues-list">
+        <li data-aos="zoom-in-up">
+          <img src="./assets/images/about/values/values-1.svg" alt="values">
+          <div class="aboutValues-desc">Выполнение заказа строго в срок</div>
+        </li>
+        <li data-aos="zoom-in-up">
+          <img src="./assets/images/about/values/values-2.svg" alt="values">
+          <div class="aboutValues-desc">Высокое качество изделий</div>
+        </li>
+        <li data-aos="zoom-in-up">
+          <img src="./assets/images/about/values/values-3.svg" alt="values">
+          <div class="aboutValues-desc">Индивидуальный подход к каждому заказу</div>
+        </li>
+        <li data-aos="zoom-in-up">
+          <img src="./assets/images/about/values/values-4.svg" alt="values">
+          <div class="aboutValues-desc">Конкурентноспособные цены</div>
+        </li>
+        <li data-aos="zoom-in-up">
+          <img src="./assets/images/about/values/values-5.svg" alt="values">
+          <div class="aboutValues-desc">Опыт
+            и профессионализм нашей команды</div>
+        </li>
+      </ul>
+
+      <div class="aboutBlock-desc flex"><a href="#" class="ml-auto inline-block page-button" data-aos="fade-left">Подробнее о нас</a></div>
     </div>
   </section>
 
   <section class="values container dark">
-    <h2 class="h2" data-aos="fade-up">Ценность деревянных изделий из массива</h2>
+    <div class="tree">
+      <div class="tree-top">
+        <h2 class="tree-title" data-aos="fade-right">Мы работаем только <br>
+          с экологически чистыми материалами</h2>
+        <div class="tree-ball img-cover" data-aos="zoom-in">
+          <img src="./assets/images/about/tree/tree-1.jpg" alt="tree">
+          <h3>Массив дерева твердых пород</h3>
+        </div>
+        <div class="tree-ball img-cover" data-aos="zoom-in">
+          <img src="./assets/images/about/tree/tree-2.jpg" alt="tree">
+          <h3>Высокосортная МДФ</h3>
+        </div>
+      </div>
+      <div class="tree-bottom">
+        <div class="tree-ball img-cover" data-aos="zoom-in">
+          <img src="./assets/images/about/tree/tree-3.jpg" alt="tree">
+          <h3>березовая фанера</h3>
+        </div>
+        <div class="tree-ball img-cover" data-aos="zoom-in">
+          <img src="./assets/images/about/tree/tree-4.jpg" alt="tree">
+          <h3>шпоны различных пород</h3>
+        </div>
+        <h4 class="tree-title" data-aos="fade-left">
+          В своих работах мы <strong>не используем ЛДСП</strong>
+        </h4>
+      </div>
+    </div>
 
-    <ul class="values-list">
-      <li data-aos="fade-left">
-        <div class="img-contain"><img src="./assets/images/main/values/values-1.svg" alt="values"></div>
-        <p>Экологичность и натуральность</p>
-      </li>
-      <li data-aos="fade-left">
-        <div class="img-contain"><img src="./assets/images/main/values/values-2.svg" alt="values"></div>
-        <p>Возможность использования лаков на водной основе</p>
-      </li>
-      <li data-aos="fade-left">
-        <div class="img-contain"><img src="./assets/images/main/values/values-3.svg" alt="values"></div>
-        <p>Предварительная сборка простота монтажа</p>
-      </li>
-      <li data-aos="fade-left">
-        <div class="img-contain"><img src="./assets/images/main/values/values-4.svg" alt="values"></div>
-        <p>Повышенная звуко и теплоизоляция</p>
-      </li>
-    </ul>
+    <div class="mt-80">
+      <h2 class="h2" data-aos="fade-up">Ценность деревянных изделий из массива</h2>
+  
+      <ul class="values-list">
+        <li data-aos="fade-left">
+          <div class="img-contain"><img src="./assets/images/main/values/values-1.svg" alt="values"></div>
+          <p>Экологичность и натуральность</p>
+        </li>
+        <li data-aos="fade-left">
+          <div class="img-contain"><img src="./assets/images/main/values/values-2.svg" alt="values"></div>
+          <p>Возможность использования лаков на водной основе</p>
+        </li>
+        <li data-aos="fade-left">
+          <div class="img-contain"><img src="./assets/images/main/values/values-3.svg" alt="values"></div>
+          <p>Предварительная сборка простота монтажа</p>
+        </li>
+        <li data-aos="fade-left">
+          <div class="img-contain"><img src="./assets/images/main/values/values-4.svg" alt="values"></div>
+          <p>Повышенная звуко и теплоизоляция</p>
+        </li>
+      </ul>
+    </div>
   </section>
 
   <section class="works container">
@@ -160,7 +219,7 @@ title: Главная
       </li>
       <li data-aos="fade-up">
         <h3 class="collabe-subtitle">Заявка</h3>
-        <p class="collabe-desc">Вы оставляете <button class="page-link" data-scroll="#mainForm">заявку</button>, прикрепляя ссылки на понравившиеся работы или на Ваш дизайн-проект
+        <p class="collabe-desc">Вы оставляете <button class="page-link" data-modal="#callback">заявку</button>, прикрепляя ссылки на понравившиеся работы или на Ваш дизайн-проект
         </p>
       </li>
       <li data-aos="fade-up">
@@ -211,5 +270,5 @@ title: Главная
     </div>
   </section>
 
-  {{> callback}}
+  {{> order}}
 </div>

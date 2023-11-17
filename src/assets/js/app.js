@@ -18,6 +18,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
       this.overlay.addEventListener('click', this.toggleMenu.bind(this));
       this.button.addEventListener('click', this.toggleMenu.bind(this));
+
+      const buttons = this.menu.querySelectorAll('[data-modal]')
+      if (buttons.length) {
+        buttons.forEach(el => {
+          el.addEventListener('click', this.closeMenu.bind(this))
+        })
+      }
+      
     }
 
     toggleMenu() {
@@ -33,8 +41,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     closeMenu() {
-      this.menu.classList.remove('header__nav--active');
-      this.button.classList.remove('header__menu-button--active');
+      this.menu.classList.remove('menu--open');
+      this.button.classList.remove('menu-button--active');
       this.overlay.hidden = true;
 
       this.enableScroll();
@@ -303,7 +311,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   addMask()
 
-  const accordion = document.querySelectorAll('.accordion-button');
+  const accordion = document.querySelectorAll('.accordion-button, .ourWork-accordion-button');
 
   if (accordion.length) {
     accordion.forEach(el => {
@@ -438,6 +446,22 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   }
 
+  const ourWorkBtns = document.querySelectorAll('.ourWork-btn');
+  if (ourWorkBtns.length) {
+    ourWorkBtns.forEach(el => {
+      const parent = el.parentElement.parentElement.parentElement;
+      el.addEventListener('click', function () {
+        if (parent) {
+          parent.style.opacity = 0;
+          setTimeout(() => {
+            parent.style.opacity = null;
+            parent.previousElementSibling.classList.remove('active');
+          }, 300)
+        }
+      })
+    })
+  }
+
   const ourWorksOverlays = document.querySelectorAll('.ourWork-overlay');
 
   if (ourWorksOverlays.length) {
@@ -529,6 +553,83 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     })
   }
+
+  function disableScroll() {
+    // Get the current page scroll position;
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+    document.documentElement.style.setProperty('scroll-behavior', 'auto');
+
+    // if any scroll is attempted, set this to the previous value;
+    window.onscroll = function () {
+      window.scrollTo(scrollLeft, scrollTop);
+    };
+  }
+
+  function enableScroll() {
+    document.documentElement.style.setProperty('scroll-behavior', null);
+    window.onscroll = function () { };
+  }
+  
+  function modalHandler() {
+    const modal = document.querySelector(`${this.dataset?.modal}`) || this
+    if (modal.classList.contains('regModal') && modal.hidden) {
+      disableScroll();
+    } else {
+      enableScroll();
+    }
+    if (modal) {
+      if (modal.hidden) {
+        modal.hidden = !modal.hidden
+        modal.style.setProperty('pointer-events', 'auto');
+        setTimeout(() => {
+          modal.style.opacity = 1
+        }, 10);
+      } else {
+        modal.style.opacity = 0
+        modal.style.setProperty('pointer-events', null);
+        const numb = Number(getComputedStyle(modal).transitionDuration.match(/(\d+\.\d+)|(\d+)/g)[0]);
+        if (numb > 0) {
+          modal.addEventListener('transitionend', hideaftertransition);
+        } else {
+          modal.hidden = true
+        }
+      }
+    }
+  }
+
+  const regModal = document.querySelectorAll('.regModal');
+
+  if (regModal) {
+    regModal.forEach(el => {
+      el.addEventListener('click', function () {
+        if (event.target.classList.contains('regModal')) {
+          modalHandler.apply(this);
+        }
+      });
+      const closeButton = el.querySelectorAll('.close-button');
+      if (closeButton.length) {
+        closeButton.forEach(button => {
+          button.addEventListener('click', () => {
+            modalHandler.apply(el);
+          });
+        })
+      }
+    });
+  }
+
+
+  function hideaftertransition() {
+    this.hidden = true
+    this.removeEventListener('transitionend', hideaftertransition);
+  }
+
+  document.addEventListener('click', () => {
+    const dataModal = event.target.closest('[data-modal]');
+    if (dataModal) {
+      modalHandler.apply(dataModal);
+    }
+  })
 
 });
 

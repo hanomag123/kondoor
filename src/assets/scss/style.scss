@@ -270,6 +270,7 @@ svg {
 
   .page-button {
     border-color: var(--white);
+    background-color: transparent;
 
     &:hover {
       background-color: var(--white);
@@ -299,7 +300,7 @@ svg {
 }
 
 .page-button {
-  background-color: transparent;
+  background-color: var(--brown);
   border: 0.1rem solid var(--brown);
   padding: 1.4rem 3.4rem;
 
@@ -309,6 +310,7 @@ svg {
 
   transition: background-color .3s, color .3s;
   font-family: 'Open Sans';
+  color: var(--white);
   @include breakpoint($sm-bp) {
     font-size: 1.4rem;
     line-height: 1.9rem;
@@ -318,8 +320,17 @@ svg {
   }
 
   &:hover {
-    background-color: var(--brown);
-    color: var(--white);
+    background-color: var(--white);
+    color: var(--brown);
+  }
+}
+
+.ourWork-modal .page-button {
+  background-color: var(--brown);
+  border: 0.1rem solid var(--brown);
+  &:hover {
+    background-color: var(--white);
+    color: var(--brown);
   }
 }
 
@@ -410,6 +421,15 @@ h2,
   }
 }
 
+.header-container {
+  padding-left: 30rem;
+  padding-right: 30rem;
+  @include breakpoint($cos-bp) {
+    padding-right: 5rem;
+    padding-left: 5rem;
+  }
+}
+
 .container {
   padding-left: 37rem;
   padding-right: 37rem;
@@ -417,7 +437,10 @@ h2,
     padding-right: 13rem;
     padding-left: 13rem;
   }
+}
 
+.header-container,
+.container {
   @include breakpoint($xl-bp) {
     padding-right: 4rem;
     padding-left: 4rem;
