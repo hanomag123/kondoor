@@ -720,7 +720,7 @@
   border-top: 0.1rem solid var(--black);
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
-  height: min-content;
+  height: auto;
 
   @include breakpoint($xl-bp) {
     padding-top: 0.8rem;
@@ -740,10 +740,11 @@
   width: 100%;
   transition: font-weight .4s ease-in-out;
   position: relative;
-
+  padding-right: 4rem;
   @include breakpoint($xl-bp) {
     font-size: 1.4rem;
     line-height: 2.8rem;
+    padding-right: 3rem;
   }
 
   &::before,
@@ -912,7 +913,8 @@
   }
 
   @include breakpoint($sm-bp) {
-    padding-left: 2.7rem;
+    padding-top: 4rem;
+    padding: 2rem;
   }
 
   form {

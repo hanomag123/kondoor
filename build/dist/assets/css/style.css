@@ -3472,7 +3472,7 @@ button.swiper-pagination-bullet {
   border-top: 0.1rem solid var(--black);
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
-  height: min-content;
+  height: auto;
 }
 @media (max-width: 1024px) {
   .accordion {
@@ -3493,11 +3493,13 @@ button.swiper-pagination-bullet {
   width: 100%;
   transition: font-weight 0.4s ease-in-out;
   position: relative;
+  padding-right: 4rem;
 }
 @media (max-width: 1024px) {
   .accordion-button {
     font-size: 1.4rem;
     line-height: 2.8rem;
+    padding-right: 3rem;
   }
 }
 .accordion-button::before, .accordion-button::after {
@@ -3663,7 +3665,8 @@ button.swiper-pagination-bullet {
 }
 @media (max-width: 500px) {
   .callback-form {
-    padding-left: 2.7rem;
+    padding-top: 4rem;
+    padding: 2rem;
   }
 }
 .callback-form form {
